@@ -1,11 +1,9 @@
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 import { PropsWithChildren } from "react";
 
-const GRAPHQL_ENDPOINT = "https://smartcahce.wpengine.com/graphql";
-
 const WPApolloProvider: React.FC<PropsWithChildren<{}>> = ({ children }) => {
   const client = new ApolloClient({
-    uri: GRAPHQL_ENDPOINT,
+    uri: `${process.env.NEXT_PUBLIC_WORDPRESS_API_URL}/graphql`,
     cache: new InMemoryCache(),
   });
 
