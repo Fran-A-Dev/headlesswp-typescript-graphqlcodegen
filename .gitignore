@@ -18,7 +18,7 @@
 # misc
 .DS_Store
 *.pem
-.codegen.yml
+!codegen.yml
 
 
 # debug
