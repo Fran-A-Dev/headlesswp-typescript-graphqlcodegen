@@ -1,0 +1,7 @@
+query Post($slug: ID!) {
+  post(id: $slug, idType: SLUG) {
+    databaseId
+    title
+    content
+  }
+}
